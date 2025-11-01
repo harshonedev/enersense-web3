@@ -1,7 +1,7 @@
 'use client'
 
 import { WagmiProvider, createConfig, http } from 'wagmi'
-import { polygon, polygonMumbai, mainnet } from 'wagmi/chains'
+import { base, baseSepolia, mainnet } from 'wagmi/chains'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { createWeb3Modal } from '@web3modal/wagmi/react'
 import { walletConnect, injected, coinbaseWallet } from 'wagmi/connectors'
@@ -9,10 +9,10 @@ import { walletConnect, injected, coinbaseWallet } from 'wagmi/connectors'
 const projectId = process.env.NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID || ''
 
 const config = createConfig({
-  chains: [polygon, polygonMumbai, mainnet],
+  chains: [base, baseSepolia, mainnet],
   transports: {
-    [polygon.id]: http(),
-    [polygonMumbai.id]: http(),
+    [base.id]: http(),
+    [baseSepolia.id]: http(),
     [mainnet.id]: http(),
   },
   connectors: [

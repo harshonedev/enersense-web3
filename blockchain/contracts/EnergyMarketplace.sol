@@ -7,7 +7,7 @@ import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 /**
  * @title EnergyMarketplace
  * @dev Peer-to-peer marketplace for trading ENRG tokens
- * Supports listings with native currency (MATIC/ETH) payments
+ * Supports listings with native currency (ETH) payments
  */
 contract EnergyMarketplace is ReentrancyGuard {
     IERC20 public enrgToken;

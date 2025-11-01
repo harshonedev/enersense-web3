@@ -17,7 +17,7 @@ export function formatKwh(kwh: number): string {
   return `${kwh.toFixed(2)} kWh`
 }
 
-export function formatCurrency(amount: string | number, currency: string = 'MATIC'): string {
+export function formatCurrency(amount: string | number, currency: string = 'ETH'): string {
   const num = typeof amount === 'string' ? parseFloat(amount) : amount
   return `${num.toFixed(4)} ${currency}`
 }
@@ -50,22 +50,22 @@ export function isValidEthereumAddress(address: string): boolean {
   return /^0x[a-fA-F0-9]{40}$/.test(address)
 }
 
-export function getExplorerUrl(txHash: string, chainId: number = 80001): string {
+export function getExplorerUrl(txHash: string, chainId: number = 84532): string {
   const explorers: { [key: number]: string } = {
     1: 'https://etherscan.io',
-    137: 'https://polygonscan.com',
-    80001: 'https://mumbai.polygonscan.com'
+    8453: 'https://basescan.org',
+    84532: 'https://sepolia.basescan.org'
   }
   
-  const baseUrl = explorers[chainId] || explorers[80001]
+  const baseUrl = explorers[chainId] || explorers[84532]
   return `${baseUrl}/tx/${txHash}`
 }
 
 export function getChainName(chainId: number): string {
   const chains: { [key: number]: string } = {
     1: 'Ethereum',
-    137: 'Polygon',
-    80001: 'Mumbai Testnet',
+    8453: 'Base',
+    84532: 'Base Sepolia',
     31337: 'Hardhat Local'
   }
   

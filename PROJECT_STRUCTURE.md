@@ -175,7 +175,7 @@ enersense-web3/
 - Solidity 0.8.20
 - Hardhat
 - OpenZeppelin Contracts
-- Polygon Network
+- Base Network
 
 ## 📦 Dependencies Overview
 
@@ -225,7 +225,7 @@ npm run dev
 cd blockchain
 npm run compile
 npm run test
-npm run deploy:mumbai
+npm run deploy:baseSepolia
 ```
 
 ## 🧪 Testing
@@ -272,7 +272,7 @@ Main tables:
 ## 🌐 Deployment
 
 - **Frontend**: Vercel, Netlify, or self-hosted
-- **Contracts**: Polygon Mumbai (testnet) or Polygon (mainnet)
+- **Contracts**: Base Sepolia (testnet) or Base (mainnet)
 - **Database**: Supabase cloud or self-hosted PostgreSQL
 
 ## 📚 Additional Resources

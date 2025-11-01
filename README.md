@@ -156,8 +156,8 @@ KWALA_WORKFLOW_ID=your-workflow-id
 KWALA_WEBHOOK_SECRET=your-webhook-secret
 
 # Blockchain
-NEXT_PUBLIC_BLOCKCHAIN_RPC_URL=https://rpc.ankr.com/polygon_mumbai
-NEXT_PUBLIC_CHAIN_ID=80001
+NEXT_PUBLIC_BLOCKCHAIN_RPC_URL=https://sepolia.base.org
+NEXT_PUBLIC_CHAIN_ID=84532
 
 # WalletConnect
 NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=your-project-id
@@ -186,11 +186,11 @@ npm run compile
 # Run tests
 npm run test
 
-# Deploy to Mumbai testnet
-npm run deploy:mumbai
+# Deploy to Base Sepolia testnet
+npm run deploy:baseSepolia
 
-# Deploy to Polygon mainnet
-npm run deploy:polygon
+# Deploy to Base mainnet
+npm run deploy:base
 ```
 
 After deployment, add the contract addresses to your `.env.local` file.
@@ -307,7 +307,7 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 - **Tuya** - IoT platform for energy monitoring
 - **OpenZeppelin** - Secure smart contract libraries
 - **Supabase** - Backend infrastructure
-- **Polygon** - Scalable blockchain network
+- **Base** - Layer 2 blockchain network
 
 ---
 

@@ -40,6 +40,8 @@ CREATE TABLE IF NOT EXISTS energy_readings (
     surplus_kwh NUMERIC NOT NULL,
     battery_level NUMERIC,
     power_output_kw NUMERIC NOT NULL,
+    event_emitted BOOLEAN DEFAULT false,
+    event_tx_hash TEXT,
     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
 );
 
@@ -74,7 +76,7 @@ CREATE TABLE IF NOT EXISTS marketplace_listings (
     token_amount TEXT NOT NULL,
     price_per_token TEXT NOT NULL,
     total_price TEXT NOT NULL,
-    currency TEXT CHECK (currency IN ('USDC', 'MATIC', 'ETH')) DEFAULT 'MATIC',
+    currency TEXT CHECK (currency IN ('USDC', 'ETH')) DEFAULT 'ETH',
     status TEXT CHECK (status IN ('active', 'sold', 'cancelled')) DEFAULT 'active',
     created_at TIMESTAMP WITH TIME ZONE DEFAULT NOW(),
     sold_at TIMESTAMP WITH TIME ZONE,

@@ -86,7 +86,7 @@ A complete, production-ready tokenized renewable energy trading platform with kW
                                                      │
                                                      ▼
                                             ┌──────────────┐
-                                            │   Polygon    │
+                                            │    Base      │
                                             │  Blockchain  │
                                             │  (Contracts) │
                                             └──────────────┘
@@ -133,7 +133,7 @@ A complete, production-ready tokenized renewable energy trading platform with kW
 ### 5. Web3 Integration
 - MetaMask support
 - WalletConnect support
-- Multiple chain support (Polygon, Ethereum)
+- Multiple chain support (Base, Ethereum)
 - Transaction history
 - Gas optimization
 
@@ -165,7 +165,7 @@ kWALA API            Workflow automation
 Solidity 0.8.20      Smart contract language
 Hardhat 2.19.4       Development framework
 OpenZeppelin 5.0.1   Audited contract libraries
-Polygon Network      Layer 2 scaling solution
+Base Network         Layer 2 scaling solution
 ```
 
 ---
@@ -206,8 +206,8 @@ npm run dev
 ### Deploy Contracts
 ```bash
 cd blockchain
-npm run deploy:mumbai  # Testnet
-npm run deploy:polygon # Mainnet
+npm run deploy:baseSepolia  # Testnet
+npm run deploy:base         # Mainnet
 ```
 
 Full instructions: [QUICKSTART.md](./QUICKSTART.md)
@@ -273,8 +273,8 @@ npm run coverage
 - **Self-hosted** - Docker or traditional server
 
 ### Blockchain
-- **Mumbai Testnet** - For testing (free)
-- **Polygon Mainnet** - Production deployment
+- **Base Sepolia Testnet** - For testing (free)
+- **Base Mainnet** - Production deployment
 - **Ethereum Mainnet** - Alternative (higher gas fees)
 
 ### Database
@@ -327,7 +327,7 @@ Areas for contribution:
 - Tuya IoT: https://developer.tuya.com
 - kWALA: https://docs.kwala.com
 - Supabase: https://supabase.com/docs
-- Polygon: https://docs.polygon.technology
+- Base: https://docs.base.org
 
 ### Community
 - GitHub Issues: Report bugs

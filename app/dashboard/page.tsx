@@ -115,7 +115,7 @@ export default function Dashboard() {
                     <td className="px-4 py-3 text-sm font-mono">
                       {voucher.tx_hash ? (
                         <a
-                          href={`https://polygonscan.com/tx/${voucher.tx_hash}`}
+                          href={typeof window !== 'undefined' ? `https://basescan.org/tx/${voucher.tx_hash}` : `#`}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-primary-600 hover:underline"

@@ -43,7 +43,7 @@ export interface MarketplaceListing {
   token_amount: string
   price_per_token: string
   total_price: string
-  currency: 'USDC' | 'MATIC' | 'ETH'
+  currency: 'USDC' | 'ETH'
   status: 'active' | 'sold' | 'cancelled'
   created_at: string
   sold_at?: string

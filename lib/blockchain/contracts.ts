@@ -46,6 +46,18 @@ export function getMarketplaceContract(signerOrProvider: ethers.Signer | ethers.
   return new ethers.Contract(address, MARKETPLACE_ABI, signerOrProvider)
 }
 
+export const ENERGY_EVENT_EMITTER_ABI = [
+  "function emitSurplusEnergy(address userAddress, bytes32 deviceId, uint256 surplusKwh, uint256 timestamp, uint256 nonce) external",
+  "event SurplusEnergyDetected(address indexed userAddress, bytes32 indexed deviceId, uint256 surplusKwh, uint256 timestamp, uint256 nonce)",
+  "function setAuthorizedEmitter(address emitter) external",
+  "function isNonceUsed(bytes32 nonceHash) external view returns (bool)"
+]
+
+export function getEnergyEventEmitterContract(signerOrProvider: ethers.Signer | ethers.Provider) {
+  const address = process.env.NEXT_PUBLIC_ENERGY_EVENT_EMITTER_ADDRESS!
+  return new ethers.Contract(address, ENERGY_EVENT_EMITTER_ABI, signerOrProvider)
+}
+
 export interface Voucher {
   user: string
   amount: bigint

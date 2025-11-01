@@ -139,7 +139,7 @@ function CreateListingModal({
           sellerAddress: address,
           tokenAmount: amount,
           pricePerToken: price,
-          currency: 'MATIC'
+          currency: 'ETH'
         })
       })
 
@@ -179,7 +179,7 @@ function CreateListingModal({
 
           <div>
             <label className="block text-sm font-medium mb-2">
-              Price per token (MATIC)
+              Price per token (ETH)
             </label>
             <input
               type="number"
@@ -194,7 +194,7 @@ function CreateListingModal({
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="text-sm text-gray-600">Total value</div>
             <div className="text-xl font-bold">
-              {(parseFloat(amount || '0') * parseFloat(price || '0')).toFixed(4)} MATIC
+              {(parseFloat(amount || '0') * parseFloat(price || '0')).toFixed(4)} ETH
             </div>
           </div>
 

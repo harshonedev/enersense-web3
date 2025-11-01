@@ -10,7 +10,7 @@ Get up and running with EnerSense in under 15 minutes!
 - [ ] Supabase account (free tier works)
 - [ ] Tuya IoT Platform account
 - [ ] kWALA account
-- [ ] Test MATIC tokens (for Mumbai testnet)
+- [ ] Test ETH tokens (for Base Sepolia testnet)
 
 ## Step 1: Clone and Install (2 minutes)
 
@@ -91,11 +91,11 @@ NEXT_PUBLIC_WALLETCONNECT_PROJECT_ID=your-project-id
 ```bash
 cd blockchain
 
-# Add your private key to .env (testnet wallet with MATIC)
+# Add your private key to .env (testnet wallet with ETH)
 echo "PRIVATE_KEY=your-private-key" > .env
 
-# Deploy to Mumbai testnet
-npm run deploy:mumbai
+# Deploy to Base Sepolia testnet
+npm run deploy:baseSepolia
 
 # Note the contract addresses
 # Add them to your .env.local
@@ -106,8 +106,8 @@ Add to `.env.local`:
 NEXT_PUBLIC_ENRG_TOKEN_ADDRESS=0x...
 NEXT_PUBLIC_VOUCHER_MINTER_ADDRESS=0x...
 NEXT_PUBLIC_MARKETPLACE_ADDRESS=0x...
-NEXT_PUBLIC_BLOCKCHAIN_RPC_URL=https://rpc.ankr.com/polygon_mumbai
-NEXT_PUBLIC_CHAIN_ID=80001
+NEXT_PUBLIC_BLOCKCHAIN_RPC_URL=https://sepolia.base.org
+NEXT_PUBLIC_CHAIN_ID=84532
 ```
 
 ## Step 7: Start Development Server (1 minute)
@@ -124,7 +124,7 @@ Visit http://localhost:3000
 ### 8.1 Connect Wallet
 1. Click "Connect Wallet" in navbar
 2. Connect MetaMask
-3. Switch to Mumbai testnet
+3. Switch to Base Sepolia testnet
 
 ### 8.2 View Dashboard
 1. Navigate to Dashboard
@@ -172,8 +172,8 @@ npm install
 ### Issue: Smart contract deployment fails
 
 **Solution:**
-- Check you have test MATIC in your wallet
-- Get test MATIC from https://faucet.polygon.technology
+- Check you have test ETH (Base Sepolia) in your wallet
+- Get test ETH from https://www.coinbase.com/faucets/base-ethereum-goerli-faucet
 - Verify private key in blockchain/.env
 
 ### Issue: Tuya API returns 401
@@ -219,8 +219,8 @@ npm run start                  # Start production server
 cd blockchain
 npm run compile                # Compile contracts
 npm run test                   # Run contract tests
-npm run deploy:mumbai          # Deploy to testnet
-npm run deploy:polygon         # Deploy to mainnet
+npm run deploy:baseSepolia     # Deploy to testnet
+npm run deploy:base            # Deploy to mainnet
 
 # Database
 # Run supabase/schema.sql in Supabase SQL Editor

@@ -104,7 +104,7 @@ trigger:
 - action: blockchain_sign
   name: Sign Voucher
   config:
-    chain: polygon
+    chain: base
     wallet: ${KWALA_SIGNER_ADDRESS}
     data: ${steps.generate_voucher.output}
     signing_method: eth_sign
@@ -116,7 +116,7 @@ trigger:
 - action: blockchain_transaction
   name: Mint ENRG Tokens
   config:
-    chain: polygon
+    chain: base
     contract: ${VOUCHER_MINTER_ADDRESS}
     function: redeem
     params:
